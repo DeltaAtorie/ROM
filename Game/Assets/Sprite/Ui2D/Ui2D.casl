@@ -1,0 +1,9 @@
+8
+4,Life,24,../../Sprite/Ui/Life.png,0.0,-417.5000000000001,48,70,10,1.0,1.0,0.5,0.5,8,Life.dds
+7,UiFrame,25,../../Sprite/Ui/Frame.png,0.0,1.1368683772161603e-13,1920,1080,10,1.0,1.0,0.5,0.5,9,Frame.dds
+7,Percent,27,../../Sprite/Ui/Percent.png,0.0,440.0,1000,55,10,1.0,1.0,0.5,0.5,11,Percent.dds
+7,Handgun,27,../../Sprite/Ui/Handgun.png,860.0,140.0,150,85,10,1.0,1.0,0.5,0.5,11,Handgun.dds
+7,Shotgun,27,../../Sprite/Ui/Shotgun.png,860.0,0.0,150,85,10,1.0,1.0,0.5,0.5,11,Shotgun.dds
+10,Machinegun,30,../../Sprite/Ui/Machinegun.png,860.0,-140.0,150,85,10,1.0,1.0,0.5,0.5,14,Machinegun.dds
+10,PlayerIcon,30,../../Sprite/Ui/PlayerIcon.png,-550.0,440.0,55,62,10,1.0,1.0,0.5,0.5,14,PlayerIcon.dds
+9,EnemyIcon,29,../../Sprite/Ui/EnemyIcon.png,550.0,440.0,55,62,10,1.0,1.0,0.5,0.5,13,EnemyIcon.dds
