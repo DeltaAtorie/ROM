@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Game.h"
 #include "Storage2D/Header2D.h"
+#include "Storage3D/Header3D.h"
 Game::Game()
 {
 	P_Sprite2D  = NewGO<Sprite2D>(0 , "sprite2d");
@@ -11,10 +12,6 @@ Game::Game()
 	P_BackGround = NewGO<GameBackGround>(0 , "background");
 	P_Other      = NewGO<GameOther>(0 , "other");
 	P_Sprite     = NewGO<GameSprite>(0 , "sprite");
-
-	P_Sprite2D->Sprite2DNewGO();
-	P_Data2D->Data2DNewGO();
-	P_Operation->OperationNewGO();
 }
 Game::~Game()
 {

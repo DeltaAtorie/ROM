@@ -14,16 +14,6 @@ enum class BackGroundClass
 class GameBackGround : public IGameObject
 {
 public:
-	void BackGroundNewGO()
-	{
-		P_Skybox =
-		NewGO<Skybox>
-		(0, "skybox");
-
-		P_Stage =
-		NewGO<Stage>
-		(0, "stage");
-	}
 	void BackGroundNewGO(BackGroundClass Class)
 	{
 		switch (Class)

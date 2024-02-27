@@ -11,12 +11,6 @@ enum class OtherClass
 class GameOther : public IGameObject
 {
 public:
-	void OtherNewGO()
-	{
-		P_GameCamera =
-		NewGO<GameCamera>
-		(0, "gamecamera");
-	}
 	void OtherNewGO(OtherClass Class)
 	{
 		switch (Class)

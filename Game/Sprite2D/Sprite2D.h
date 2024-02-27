@@ -4,12 +4,14 @@
 #include "Code/Opening2D.h"
 #include "Code/OptionSprite2D.h"
 #include "Code/ScreenChange2D.h"
+#include "Code/Story2D.h"
 
 class Animation2D;
 class Ending2D;
 class Opening2D;
 class OptionSprite2D;
 class ScreenChange2D;
+class Story2D;
 
 enum class Sprite2DClass
 {
@@ -18,26 +20,13 @@ enum class Sprite2DClass
 	OPENING,
 	OPTIONSPRITE,
 	SCREENCHANGE,
+	STORY
 };
 
 class Sprite2D : public IGameObject
 {
 public:
-	void Sprite2DNewGO()
-	{
-		P_Opening2D =
-		NewGO<Opening2D>
-		(0, "opening2d");
-
-		P_OptionSprite2D =
-		NewGO<OptionSprite2D>
-		(0, "optionsprite2d");
-
-		P_ScreenChange2D =
-		NewGO<ScreenChange2D>
-		(2, "ScreenChange2d");
-	}
-	void Data2DNewGO(Sprite2DClass Class)
+	void Sprite2DNewGO(Sprite2DClass Class)
 	{
 		switch (Class)
 		{
@@ -64,7 +53,12 @@ public:
 		case Sprite2DClass::SCREENCHANGE:
 			P_ScreenChange2D =
 			NewGO<ScreenChange2D>
-			(2, "ScreenChange2d");
+			(2, "screenChange2d");
+			break;
+		case Sprite2DClass::STORY:
+			P_Story2D =
+			NewGO<Story2D>
+			(2, "story2d");
 			break;
 		}
 	}
@@ -85,7 +79,11 @@ public:
 
 		P_ScreenChange2D =
 		FindGO<ScreenChange2D>
-		("ScreenChange2d");
+		("screenChange2d");
+
+		P_Story2D =
+		FindGO<Story2D>
+		("story2d");
 	}
 
 	void Sprite2DDeleteGO()
@@ -94,6 +92,7 @@ public:
 		DeleteGO(P_Opening2D);
 		DeleteGO(P_OptionSprite2D);
 		DeleteGO(P_ScreenChange2D);
+		DeleteGO(P_Story2D);
 	}
 	void Sprite2DDeleteGO(Sprite2DClass Class)
 	{
@@ -114,16 +113,16 @@ public:
 		case Sprite2DClass::SCREENCHANGE:
 			DeleteGO(P_ScreenChange2D);
 			break;
+		case Sprite2DClass::STORY:
+			DeleteGO(P_Story2D);
+			break;
 		}
 	}
 public:
 	Animation2D* P_Animation2D       = nullptr;
-
 	Ending2D* P_Ending2D             = nullptr;
-
 	Opening2D* P_Opening2D           = nullptr;
-
 	OptionSprite2D* P_OptionSprite2D = nullptr;
-
 	ScreenChange2D* P_ScreenChange2D = nullptr;
+	Story2D* P_Story2D               = nullptr;
 };
